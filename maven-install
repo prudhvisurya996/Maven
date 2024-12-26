@@ -1,0 +1,18 @@
+wget https://archive.apache.org/dist/maven/maven-3/3.9.2/binaries/apache-maven-3.9.2-bin.tar.gz
+tar -xvzf apache-maven-3.9.2-bin.tar.gz
+export M2_HOME=/opt/apache-maven-3.9.2
+export PATH=$M2_HOME/bin:$PATH
+source ~/.bashrc
+sudo apt update
+sudo apt install openjdk-17-jdk
+java -version
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+
+
+sudo vi /etc/environment
+
+
+JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+M2_HOME="/opt/apache-maven-3.9.2"
+PATH="$PATH:$JAVA_HOME/bin:$M2_HOME/bin"
